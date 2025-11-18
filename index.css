@@ -1,0 +1,237 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+:root{
+    --text-color :  hsl(235, 19%, 35%) ;
+    --body-bg-colore : hsl(0, 0%, 98%) ;
+    --list-bg-color : white ;
+    --url : url("./bg-desktop-light.jpg") ;
+
+}
+.dark-mode{
+    --text-color :  hsl(234, 39%, 85%) ;
+    --body-bg-colore :  hsl(235, 21%, 11%) ;
+    --list-bg-color :hsl(235, 24%, 19%) ;
+    --url : url("./bg-desktop-dark.jpg")
+}
+h1{
+    color: white;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.min{
+    height: auto;
+    min-height: 100dvh;
+    background-image: var(--url);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding: 70px 0px;
+    background-color: var(--body-bg-colore);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 500px;
+}
+.color-mode .sun{
+    display: none;
+}
+.dark-mode .color-mode .moon {
+    display: none;
+}
+.dark-mode .color-mode .sun {
+    display: block;
+}
+.input{
+    height: 50px;
+    width: 500px;
+    background-color: var(--list-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    border-radius: 3px;
+
+}
+.input input {
+    width: 95%;
+    height: 100%;
+    border-style: none;
+    background-color: var(--list-bg-color);
+    outline: none;
+    color:var(--text-color) ;
+    font-size: 15px;
+}
+.cheaked{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--text-color);
+    cursor: pointer;  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+.cheaked img{
+    width: 10px;
+    visibility: hidden;
+}
+.cheaked:hover img{
+    visibility: visible;
+}
+.cheaked:hover{
+    background: #E55D87;  
+    background: -webkit-linear-gradient(to right, #E55D87,#5FC3E4); 
+    background: linear-gradient(to right, #E55D87 ,  #5FC3E4); 
+
+}
+
+.container{
+    background-color: var(--list-bg-color);
+    border-radius: 3px;
+    width: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    height: auto;
+}
+.task-container{
+    height: auto;
+}
+.pointer-cursor{
+    cursor: pointer; 
+}
+.pointer-cursor:hover{
+    font-weight: 600;
+
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    height: 40px;
+    padding: 0px 15px;
+}
+/* .task-info{
+    
+} */
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+    height: 40px;
+    padding: 0px 15px;
+    position: relative;
+    border-bottom-style: solid;
+    border-color: hsla(235, 19%, 35%, 0.456);
+    border-width: 1px;
+    overflow: hidden;
+}
+.task p{
+    font-size: large;
+    font-weight: 400;
+}
+.remove-task{
+    position: absolute;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.remove-task img{
+    width: 15px;
+    visibility: hidden;
+}
+.task:hover .remove-task img{
+    visibility: visible;
+}
+
+
+.as-complete {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+.cleackted-teaxt{
+    color: hsl(220, 93%, 58%);
+}
+
+.clear-completed:hover{
+    color: hsl(220, 93%, 58%);
+}
+
+
+@media (max-width: 500px) {
+    .header,
+    .input,
+    .container {
+        width: 80%;
+    }
+    :root{
+        --url : url("./bg-mobile-light.jpg") ;
+    }
+    .dark-mode{
+        --url : url("./bg-mobile-dark.jpg")
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 9px;
+    }
+    .input input {
+        width: 90%;
+    }
+    .d-flex{
+        padding: 0px 6px;
+        column-gap: 8px;
+        
+    }
+    .clear-completed , .slect-to-show , .item-left{
+        width: fit-content;
+    }
+
+}
+@media (max-width: 600px){
+    .header,
+    .input,
+    .container {
+        width: 80%;
+    }
+    .input input {
+        width: 90%;
+    }
+    p{
+        font-size: 11px;
+    }
+    .clear-completed , .slect-to-show , .item-left{
+        width: fit-content;
+    }
+    .d-flex{
+        padding: 0px 10px;
+        column-gap: 10px;
+        
+    }
+
+}

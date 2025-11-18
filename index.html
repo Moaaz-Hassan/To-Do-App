@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>To-Do</title>
+</head>
+<body>
+    <div class="min">
+        <div class="header">
+            <h1>TO-DO</h1>
+            <div class="color-mode pointer-cursor">
+                <img src="./icon-moon.svg" class="moon" alt="">
+                <img src="./icon-sun.svg" class="sun" alt="">
+            </div>
+        </div>
+        <div class="input">
+            <div class="cheaked">
+                <img src="./icon-check.svg" alt="">
+            </div>
+            <input type="text" placeholder="Create a new todo.... ">
+        </div>
+        <div class="container">
+            <div class="task-container">
+                
+
+            </div>
+            <div class="task-info d-flex" >
+                <div class="item-left d-flex" style="column-gap: 5px;">
+                    <p class="number-of-item"></p><p>items left</p>
+                </div>
+                <div class="slect-to-show d-flex">
+                    <p class="all pointer-cursor">All</p>
+                    <p class="active pointer-cursor">Active</p>
+                    <p class="completed pointer-cursor">Completed</p>
+                </div>
+                <div class="clear-completed">
+                    <p class="clear-completed pointer-cursor">Clear completed</p>
+                </div>
+                
+            </div>
+
+        </div>
+        
+         
+
+    </div>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
